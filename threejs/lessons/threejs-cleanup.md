@@ -218,10 +218,10 @@ function waitSeconds(seconds = 0) {
 async function process() {
   for (;;) {
     const resTracker = addStuffToScene();
-    await wait(2);
+    await waitSeconds(2);
     cubes.length = 0;  // remove the cubes
     resTracker.dispose();
-    await wait(1);
+    await waitSeconds(1);
   }
 }
 process();
